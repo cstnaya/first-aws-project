@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: min(100%, 1150px);
+    margin: 0 auto;
+    padding: 55px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 4em;
+}
+
+.row + .row {
+    margin-top: 4em;
+}
+
+.col {
+    width: 100%;
+}
+
+.primary-title {
+    color: rgb(86, 133, 117);
+}
+
+.secondary-title {
+    color: #d9d9d9;
+    margin: 0;
+}
+
+header,
+.caution {
+    background: #365;
+    color: #fff;
+}
+
+.img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
