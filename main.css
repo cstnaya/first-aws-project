@@ -37,8 +37,21 @@ header,
     color: #fff;
 }
 
+.secondary-ctx {
+    background-color: beige;
+}
+
 .img {
     width: 100%;
     max-height: 350px;
     object-fit: cover;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#raise-cats-nums {
+    font-size: 3.5em;
+    margin: 0 .125em;
 }

@@ -14,9 +14,14 @@
             <h4 class="secondary-title">Go here to find your only love.</h4>
         </div>
     </header>
+    <section class="secondary-ctx">
+        <div class="container">
+            <h2 class="text-center primary-title">We have helped <span id="raise-cats-nums"></span> cats to find their sweet home!</h2>
+        </div>
+    </section>
     <section class="container row">
         <div class="col">
-            <h2 class="primary-title">Apodt</h2>
+            <h2 class="primary-title">Adopt</h2>
             <p>Suspendisse ut augue nibh. Donec eget tortor ac urna aliquam ornare. Vestibulum sed sapien malesuada, posuere nulla ut, iaculis nulla. Nullam in ex eros.</p>
         </div>
         <div class="col">
@@ -24,7 +29,7 @@
             <p>Maecenas interdum pharetra tristique. Duis a tortor efficitur, tincidunt libero vitae, tempor purus. Donec ac orci id nisi porttitor pharetra vitae in elit. Mauris dapibus rutrum rutrum. Nullam nec urna pretium, iaculis orci id, mattis nulla. Donec lacinia est magna, ultrices aliquam massa volutpat ac.</p>
         </div>
         <div class="col">
-            <h2 class="primary-title">care</h2>
+            <h2 class="primary-title">Care</h2>
             <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
         </div>
     </section>
@@ -48,5 +53,22 @@
             </div>
         </div>
     </section>
+    <script>
+        function appendRaiseCatsNumber() {
+            const numNode = document.querySelector("#raise-cats-nums")
+
+            fetch("PUT-YOUR-API-GATEWAY-URL-HERE")
+                .then(res => res.json())
+                .then(res => { 
+                    const { raiseCatsNum } = JSON.parse(res.body)
+                    numNode.innerText = raiseCatsNum
+                })
+                .catch(e => {
+                    numNode.innerText = 999
+                })
+        }
+
+        window.onload = appendRaiseCatsNumber
+    </script>
 </body>
 </html>
