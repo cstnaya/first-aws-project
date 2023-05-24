@@ -1,5 +1,7 @@
 # First AWS
 
+![](./imgs/preview.png)
+
 ## AWS Tools
 
 1. amplify
